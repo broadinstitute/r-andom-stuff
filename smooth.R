@@ -6,5 +6,5 @@ mean3 <- function(data) {
     }
     first <- data[1]
     last <- data[n]
-    (c(data, last, last) + c(first, data, last) + c(first, first, data))[2:(n+1)] / 3
+    (c(data[2:n], last) + data + c(first, data[1:(n-1)])) / 3
 }
